@@ -1,0 +1,852 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply text-my-yellow mb-0 px-3 hover:border-b-4  py-6 text-lg  font-medium hover:text-white;
+  }
+  .nav-active {
+    @apply border-b-4 text-white;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Outfit", sans-serif;
+}
+/* button */
+.button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:active,
+.button:hover {
+  outline: 0;
+}
+
+.button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+}
+
+/* button */
+.userDetailButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.userDetailButton:active,
+.userDetailButton:hover {
+  outline: 0;
+}
+
+.userDetailButton p {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.userDetailButton:hover p {
+  background: none;
+  text-decoration-line: none;
+}
+
+@media (min-width: 768px) {
+  .userDetailButton {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+}
+
+/*Cancel button */
+.Cbutton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #ff4040, #f34251 50%, #ebb400);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(248, 56, 56, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.Cbutton:active,
+.Cbutton:hover {
+  outline: 0;
+}
+
+.Cbutton span {
+  background-color: rgb(255, 0, 0);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.Cbutton:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .Cbutton {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+}
+/* user booked appointments */
+.userCardContainer {
+  margin-top: 30px;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.headline1 {
+  margin: 0;
+  padding: 1rem;
+  font-size: max(20px, 2vw);
+  line-height: 1.1;
+  font-family: Raleway, sans-serif;
+  color: hsl(263, 22%, 7%);
+}
+.headline--text-stroke1 {
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-fill-color: hsl(216, 86%, 78%);
+}
+.usercards tr td:first-child {
+  display: flex;
+  width: 5rem;
+}
+.usercards:hover {
+  box-shadow: rgba(0, 0, 0, 0.9) 5px 15px 25px;
+}
+.BAtbody {
+  gap: 3px;
+}
+
+.usercards {
+  margin: 4%;
+  height: 90%;
+  width: 400px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, red, blue) 10;
+  transition: 0.3s;
+  background: linear-gradient(45deg, rgb(250, 210, 210), rgb(168, 168, 252))
+    border-box; /*3*/
+}
+
+.userCardContainer .btn {
+  margin-bottom: 5px;
+  padding: 8px 40px;
+}
+.userCardContainer .btn:hover {
+  box-shadow: rgba(198, 231, 7, 0.5) 2px 8px 10px;
+}
+
+/* Loader */
+.loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  width: 80px;
+  height: 80px;
+  padding-left: 0;
+}
+.loader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #75db00;
+  border-color: #75db00 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* User Appointment Details */
+
+.userADtable {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+.userADhead {
+  font-size: max(35px, 4vw);
+}
+.headline {
+  margin: 0;
+  padding: 1rem;
+  font-size: max(50px, 5vw);
+  line-height: 1.1;
+  font-family: Raleway, sans-serif;
+  color: hsl(263, 22%, 7%);
+}
+.headline--text-stroke {
+  -webkit-text-stroke-color: rgb(41, 7, 110);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-fill-color: hsl(33, 100%, 96%);
+}
+
+.userAdbodycontainer {
+  display: flex;
+  justify-content: center;
+  font-size: max(20px, 1.5vw);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.userADbody div div:first-child {
+  width: max(100px, 8vw);
+  display: flex;
+}
+.userADbody div div:last-child {
+  width: max(150px, 20vw);
+  font-size: max(25px, 1.7vw);
+  font-weight: 800;
+}
+.tr {
+  display: flex;
+  margin-bottom: 10px;
+}
+.ADuserButtondiv {
+  display: flex;
+  justify-content: center;
+  margin-top: max(10px, 2vh);
+  margin-right: 20px;
+}
+.ADbutton {
+  margin-right: 20px;
+}
+/* User Appointment Details QR */
+.ADQRcontainer {
+  display: flex;
+
+  justify-content: end;
+  margin-right: 15vw;
+}
+
+.ADQR {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: max(100px, 15vw);
+  height: max(150px, 10vh);
+  margin-top: 120px;
+  position: absolute;
+}
+.ADQRP {
+  width: max(50px, 25vw);
+  display: flex;
+
+  width: max(100px, 15vw);
+  text-align: center;
+  font-size: max(15px, 1.5vw);
+}
+
+.qrimg {
+  height: max(150px, 10vh);
+}
+.ADQRcontainer1 {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.imgP {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.ADQRP1 {
+  font-size: 15px;
+  text-align: end;
+}
+.userAD-img1 {
+  width: 200px;
+  display: flex;
+  justify-content: end;
+}
+/* Login Form css */
+.wrapper1 {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper1 h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper1 .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  /* background: salmon; */
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: white;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.wrapper1 .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper1 button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.wrapper1 .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+.LoginBody {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./assets/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.avatar {
+  display: inline-block;
+  margin-bottom: 0;
+  height: 3rem;
+  width: 3rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.avatar-nav {
+  margin-right: 0.6rem;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+/* My Profile */
+/* Edit Button */
+.editButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.editButton:active,
+.editButton:hover {
+  outline: 0;
+}
+
+.editButton p {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.editButton:hover p {
+  background: none;
+  text-decoration-line: none;
+}
+
+@media (min-width: 768px) {
+  .editButton {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+} /* Change Password Button */
+.changePasswordButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.changePasswordButton:active,
+.changePasswordButton:hover {
+  outline: 0;
+}
+
+.changePasswordButton p {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.changePasswordButton:hover p {
+  background: none;
+  text-decoration-line: none;
+}
+/* Update Profile */
+.updateProfilehead {
+  font-size: max(20px, 4vw);
+}
+.updateProfileBody {
+  width: 100%;
+}
+.updateProfilecontainer {
+  width: max(200px, 30vw);
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.9) 5px 15px 25px;
+}
+@media (min-width: 768px) {
+  .changePasswordButton {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+}
+.avatar-profile {
+  height: 16rem;
+  width: 16rem;
+}
+.myProfileImage {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.myProfileHead {
+  font-size: 50px;
+}
+.myProfileRightDiv {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.myProfileRightDiv p {
+  font-weight: 600;
+}
+.myprofile-edit-button-div {
+  margin-top: 10px;
+  /* display: flex;
+  justify-content: center; */
+}
+.text-1 {
+  font-size: 20px;
+}
+.headline3 {
+  margin: 0;
+  padding: 1rem;
+  font-size: max(30px, 3.5vw);
+  line-height: 1.1;
+  font-family: Raleway, sans-serif;
+  color: hsl(263, 22%, 7%);
+}
+.headline--text-stroke3 {
+  -webkit-text-stroke-color: rgb(41, 7, 110);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-fill-color: hsl(33, 100%, 96%);
+}
+.myProfileUpdateButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 70%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.myProfileUpdateButton:active,
+.myProfileUpdateButton:hover {
+  outline: 0;
+}
+
+.myProfileUpdateButton p {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 20px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.myProfileUpdateButton:hover p {
+  background: none;
+  text-decoration-line: none;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.btn-gradient-1 {
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+}
+
+.btn-gradient-1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  color: darkblue;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+/* New Appointment */
+.createButton {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: max(18px, 1.5vw);
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.createButton:active,
+.createButton:hover {
+  outline: 0;
+}
+
+.createButton p {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.createButton:hover p {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .createButton {
+    font-size: max(10px, 1.5vw);
+    min-width: max(150px, 2vw);
+  }
+}
+.newAppointmentbody {
+  width: 100%;
+}
+.newAppointmentContainer {
+  width: 70vw;
+  padding: 0px 20px;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.9) 5px 15px 25px;
+}
+.formcontainer {
+  width: 70vw;
+  height: 100%;
+  margin-top: 10px;
+}
+.gridcontainer {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 40px;
+}
+.gridcontainer input {
+  border: 1px solid black;
+}
+
+@media (max-width: 1300px) {
+  .usercards {
+    width: 25vw;
+  }
+}
+@media (max-width: 1000px) {
+  .usercards {
+    width: 35vw;
+  }
+  .userCardContainer {
+    margin-top: 30px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .updateProfilecontainer {
+    width: 60vw;
+    gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .usercards {
+    width: 42vw;
+  }
+  .updateProfilecontainer {
+    width: 80vw;
+    gap: 20px;
+  }
+  .gridcontainer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px 40px;
+  }
+}
+@media (max-width: 650px) {
+  .usercards {
+    width: max(200px, 70vw);
+    height: 90%;
+  }
+  .userCardContainer {
+    margin-top: 30px;
+
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .ADuserButtondiv {
+    flex-direction: column;
+    gap: 10px;
+    width: 70vw;
+  }
+  .ADbutton {
+    margin-right: 0px;
+  }
+  .userADcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .avatar-profile {
+    height: 80%;
+    width: 80%;
+  }
+  .updateProfilecontainer {
+    width: 80vw;
+    gap: 20px;
+  }
+  .headline3 {
+    font-size: 7vw;
+  }
+  .text-1 {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 770px) {
+  .ADQRcontainer {
+    display: none;
+  }
+}
+@media (min-width: 770px) {
+  .ADQRcontainer1 {
+    visibility: hidden;
+    display: none;
+  }
+}
